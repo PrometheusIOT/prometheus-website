@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prometheus-tech.com.mx/sitemap.xml

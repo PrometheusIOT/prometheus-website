@@ -1,0 +1,11 @@
+/nosotros.html   /nosotros   301
+/soluciones.html /soluciones 301
+/contacto.html   /contacto   301
+
+/nosotros/   /nosotros   301
+/soluciones/ /soluciones 301
+/contacto/   /contacto   301
+
+/nosotros   /nosotros.html   200
+/soluciones /soluciones.html 200
+/contacto   /contacto.html   200

@@ -1,0 +1,180 @@
+:root{
+  --bg:#0b0f16;
+  --panel:#0f1624;
+  --text:#e8eefc;
+  --muted:#a9b6d3;
+  --line:#1e2a44;
+  --accent:#ff6a2b; /* fuego/ámbar */
+}
+
+*{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 1200px at 50% -10%, rgba(255,106,43,.18), transparent 90%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.55;
+
+  background-repeat: no-repeat;
+  
+}
+
+
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 18px;
+  margin-top: 18px;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /**background: rgba(11,15,22,.75);**/
+  backdrop-filter: blur(10px);
+  /**border-bottom: 1px solid var(--line);**/
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding: 14px 0;
+}
+
+.brand{
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+.brand span{
+  color: var(--accent);
+}
+
+nav a{
+  color: var(--muted);
+  text-decoration:none;
+  margin-left:14px;
+  font-weight:600;
+}
+
+nav a:hover{ color: var(--text); }
+
+section{
+  margin: 18px 0;
+  padding: 22px;
+  background: rgba(15,22,36,.65);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+h1{
+  margin:0 0 10px 0;
+  font-size: 40px;
+  letter-spacing: .3px;
+}
+
+h2{
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+p{ color: var(--muted); margin: 10px 0; }
+
+strong{ color: var(--text); }
+
+ul{ margin: 10px 0 0 18px; color: var(--muted); }
+
+hr{ display:none; }
+
+a{
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: rgba(255,106,43,.55);
+}
+
+.footer{
+  margin: 22px 0 40px;
+  color: var(--muted);
+  text-align:center;
+  font-size: 13px;
+}
+
+.cta{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+
+.btn{
+  display:inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255,106,43,.14);
+  text-decoration:none;
+  font-weight:700;
+}
+
+.btn:hover{
+  background: rgba(255,106,43,.22);
+}
+
+.btn.ghost{
+  background: transparent;
+  color: var(--muted);
+}
+
+.btn.ghost:hover{
+  color: var(--text);
+  background: rgba(255,255,255,.04);
+}
+
+/**Nosotros page**/
+
+@media (min-width: 768px){
+.container-grid{
+  display:grid;
+  grid-template-columns: 6fr 4fr;
+  column-gap: 2rem;
+  grid-auto-flow: column;
+}
+
+aside {
+  grid-column: 2 / 4;
+} 
+}
+
+/**Soluciones page**/
+
+.container-animation{
+  animation: flicker 3s infinite;
+} 
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.4; }
+}
+
+
+/**Catalogo page**/
+
+.text-animation{
+  animation: flicker 3s infinite;
+}
+
+.is-disabled{
+  pointer-events: none;
+  opacity: .7;
+  cursor: default;
+}
+
+/**Contacto page**/
+
