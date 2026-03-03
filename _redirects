@@ -7,7 +7,6 @@
 /contacto     /contacto.html     200
 /contacto/    /contacto.html     200
 
-# si alguien escribe .html, lo mandas a la URL limpia (sin slash final)
 /nosotros.html    /nosotros    301
 /soluciones.html  /soluciones  301
 /contacto.html    /contacto    301
