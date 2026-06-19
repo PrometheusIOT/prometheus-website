@@ -5,73 +5,181 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prometheus</title>
   <link rel="stylesheet" href="css/styles.css" />
-  
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-
   <link rel="canonical" href="https://prometheus-tech.com.mx/">
-
   <meta name="description" content="Empresa tecnológica B2B especializada en el desarrollo de soluciones integrables de hardware y software, enfocada en control, seguridad y telemetría.">
   <meta name="robots" content="index,follow">
-
-  <meta property="og:title" content="Prometheus.">
+  <meta property="og:title" content="Prometheus">
   <meta property="og:description" content="Soluciones integrables de hardware y software para control, seguridad y telemetría.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://prometheus-tech.com.mx/">
-
 </head>
 
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">Prometheus<span>•</span></div>
+  <div class="theme-ripple" aria-hidden="true"></div>
 
-      <!--Cloudfire-->
-    <nav>
-    <a href="/">Inicio</a>  
-    <a href="/nosotros">Nosotros</a>
-    <a href="/soluciones">Soluciones</a>
-    <a class="text text-animation is-disabled" href="#" aria-disabled="true" title="En progreso">Catálogo</a>
-    <a href="/contacto">Contacto</a>
-    </nav>
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Prometheus — Inicio">Prometheus<span>•</span></a>
+      <nav>
+        <a href="/"            class="active">Inicio</a>
+        <a href="/nosotros">Nosotros</a>
+        <a href="/soluciones">Soluciones</a>
+        <a href="#" class="is-disabled" aria-disabled="true" title="En progreso">Catálogo</a>
+        <a href="/contacto" class="contact-link" data-ripple>Contacto</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNavPanel">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+      <a href="/" class="active">Inicio</a>
+      <a href="/nosotros">Nosotros</a>
+      <a href="/soluciones">Soluciones</a>
+      <a href="#" class="is-disabled" aria-disabled="true" title="En progreso">Catálogo</a>
+      <a href="/contacto" class="contact-link" data-ripple>Contacto</a>
     </div>
   </header>
 
-  <main class="container">
-    <section>
-      <h1>Prometheus</h1>
-      <p><strong>Tecnología que da control, seguridad y visibilidad.</strong></p>
-      <p>
-        Soluciones integrables de hardware y software para operaciones donde la confiabilidad
-        y la precisión son esenciales.
-      </p>
+  <main>
+    <div class="container">
 
-      <div class="cta">
-        <a class="btn" href="contacto.html">Contactar</a>
-        <a class="btn ghost" href="soluciones.html">Ver capacidades</a>
+      <!-- Hero -->
+      <section class="hero">
+        <span class="eyebrow">Control · Seguridad · Telemetría</span>
+        <h1>Tecnología que se integra<br>donde importa.</h1>
+        <p class="hero-sub">
+          Hardware, firmware y software diseñados para operar dentro de sistemas
+          existentes — con precisión, sin fricciones.
+        </p>
+        <div class="cta">
+          <a class="btn btn-dark contact-link" href="/contacto" data-ripple>Contactar</a>
+          <a class="btn btn-outline" href="/soluciones">Ver capacidades</a>
+        </div>
+
+        <!-- Decoración sutil: círculos concéntricos -->
+        <svg class="hero-deco" width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="210" cy="210" r="200" stroke="#1a1916" stroke-width="1"/>
+          <circle cx="210" cy="210" r="150" stroke="#1a1916" stroke-width="1"/>
+          <circle cx="210" cy="210" r="100" stroke="#1a1916" stroke-width="1"/>
+          <circle cx="210" cy="210" r="50"  stroke="#1a1916" stroke-width="1"/>
+          <circle cx="210" cy="10"   r="10"  fill="#1a1916"/>
+        </svg>
+      </section>
+
+      <!-- Enfoque -->
+      <section class="section">
+        <span class="section-label">Lo que hacemos</span>
+        <h2>Soluciones integrables<br>para operaciones críticas.</h2>
+        <p>
+          Desarrollamos tecnología diseñada para integrarse a sistemas existentes,
+          con énfasis en estabilidad, compatibilidad y escalabilidad.
+        </p>
+
+        <div class="capabilities">
+          <div class="cap">
+            <span class="cap-num">01</span>
+            <div class="cap-title">Hardware y firmware</div>
+            <div class="cap-desc">Componentes diseñados para integrarse sin fricción a infraestructura existente.</div>
+          </div>
+          <div class="cap">
+            <span class="cap-num">02</span>
+            <div class="cap-title">Telemetría y datos</div>
+            <div class="cap-desc">Adquisición y transmisión de datos en tiempo real desde entornos complejos.</div>
+          </div>
+          <div class="cap">
+            <span class="cap-num">03</span>
+            <div class="cap-title">Control y monitoreo</div>
+            <div class="cap-desc">Interfaces y sistemas para supervisión operacional con alta confiabilidad.</div>
+          </div>
+          <div class="cap">
+            <span class="cap-num">04</span>
+            <div class="cap-title">Documentación técnica</div>
+            <div class="cap-desc">Especificaciones y guías de integración para equipos de ingeniería.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statement -->
+      <div class="statement">
+        <div class="stmt-line" aria-hidden="true"></div>
+        <div>
+          <p class="stmt-text">"El fuego no fue un regalo — fue una transferencia de poder. Eso es lo que hacemos con la tecnología."</p>
+          <p class="stmt-author">Prometheus · B2B Hardware &amp; Software</p>
+        </div>
       </div>
-    </section>
 
-    <section>
-      <h2>Enfoque</h2>
-      <p>
-        Desarrollamos tecnología diseñada para integrarse a sistemas existentes, con énfasis en
-        estabilidad, compatibilidad y escalabilidad.
-      </p>
-      <ul>
-        <li>Hardware, firmware y software integrables</li>
-        <li>Telemetría y adquisición de datos</li>
-        <li>Control y monitoreo de operaciones</li>
-        <li>Documentación técnica para integración</li>
-      </ul>
-    </section>
-
-    <div class="footer">
-      © <span id="y"></span> Prometheus • Soluciones B2B de hardware y software
-    </div>
+    </div><!-- /.container -->
   </main>
 
+  <footer>
+    <div class="footer-inner">
+      <a class="brand-footer" href="/" aria-label="Prometheus — Inicio">Prometheus<span>•</span></a>
+      <span class="footer-copy">© <span id="y"></span> · Soluciones B2B de hardware y software</span>
+      <div class="footer-links">
+        <a href="/nosotros">Nosotros</a>
+        <a href="/contacto">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+  (() => {
+    const btn   = document.getElementById('menuToggle');
+    const panel = document.getElementById('mobileNavPanel');
+    if (!btn || !panel) return;
+    btn.addEventListener('click', () => {
+      const isOpen = panel.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    panel.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        panel.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+  </script>
+  <script>
+  (() => {
+    const DELAY    = 200;
+    const DURATION = 650;
+    const links    = document.querySelectorAll('a[data-ripple]');
+    if (!links.length) return;
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    links.forEach(a => {
+      a.addEventListener('click', (e) => {
+        if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        if (prefersReduced) return;
+        e.preventDefault();
+        a.classList.add('ripple-flash');
+        const r  = a.getBoundingClientRect();
+        const cx = r.left + r.width  / 2;
+        const cy = r.top  + r.height / 2;
+        const r0 = Math.sqrt((r.width/2)**2 + (r.height/2)**2) + 2;
+        document.documentElement.style.setProperty('--cx', cx + 'px');
+        document.documentElement.style.setProperty('--cy', cy + 'px');
+        document.documentElement.style.setProperty('--r0', r0 + 'px');
+        document.body.classList.add('ripple-ready');
+        void document.body.offsetHeight;
+        setTimeout(() => document.body.classList.add('ripple-go'), DELAY);
+        setTimeout(() => { window.location.href = href; }, DELAY + DURATION);
+      });
+    });
+
+    window.addEventListener('pageshow', () => {
+      document.body.classList.remove('ripple-ready', 'ripple-go');
+      links.forEach(a => a.classList.remove('ripple-flash'));
+    });
+  })();
   </script>
 </body>
 </html>

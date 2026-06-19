@@ -6,60 +6,106 @@
   <title>Contacto • Prometheus</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-
   <link rel="canonical" href="https://prometheus-tech.com.mx/contacto">
-
-  <meta name="description" content="Empresa tecnológica B2B especializada en el desarrollo de soluciones integrables de hardware y software, enfocada en control, seguridad y telemetría.">
+  <meta name="description" content="Contacta a Prometheus para conocer más sobre nuestras soluciones de hardware y software o hablar de una integración.">
   <meta name="robots" content="index,follow">
-
-  <meta property="og:title" content="Prometheus.">
+  <meta property="og:title" content="Contacto • Prometheus">
   <meta property="og:description" content="Soluciones integrables de hardware y software para control, seguridad y telemetría.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://prometheus-tech.com.mx/contacto">
-
-
 </head>
 
 <body>
   <header>
-    <div class="container nav">
-      <div class="brand">Prometheus<span>•</span></div>
-      <!--Cloudfire-->
-    <nav>
-    <a href="/">Inicio</a>  
-    <a href="/nosotros">Nosotros</a>
-    <a href="/soluciones">Soluciones</a>
-    <a class="text text-animation is-disabled" href="#" aria-disabled="true" title="En progreso">Catálogo</a>
-    <a href="/contacto">Contacto</a>
-    </nav>
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Prometheus — Inicio">Prometheus<span>•</span></a>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/nosotros">Nosotros</a>
+        <a href="/soluciones">Soluciones</a>
+        <a href="#" class="is-disabled" aria-disabled="true" title="En progreso">Catálogo</a>
+        <a href="/contacto" class="contact-link active">Contacto</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNavPanel">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+      <a href="/">Inicio</a>
+      <a href="/nosotros">Nosotros</a>
+      <a href="/soluciones">Soluciones</a>
+      <a href="#" class="is-disabled" aria-disabled="true" title="En progreso">Catálogo</a>
+      <a href="/contacto" class="contact-link active">Contacto</a>
     </div>
   </header>
 
-  <main class="container">
-    <section>
-      <h1>Contacto</h1>
-      <p>¿Quieres conocer más sobre nuestras soluciones o hablar de una integración?</p>
+  <main>
+    <div class="container">
 
-      <p>
-        <a href="mailto:contacto@prometheus-tech.com.mx">
-          contacto@prometheus-tech.com.mx
-        </a>
-      </p>
+      <!-- Hero -->
+      <section class="hero">
+        <span class="eyebrow">Hablemos</span>
+        <h1>¿Tienes un proyecto<br>en mente?</h1>
+        <p class="hero-sub">
+          ¿Quieres conocer más sobre nuestras soluciones o hablar de una integración?
+          Escríbenos directamente.
+        </p>
 
-      <div class="cta">
-        <a class="btn" href="mailto:contacto@prometheus-tech.com.mx?subject=Contacto%20-%20Prometheus">
-          Enviar correo
-        </a>
+        <div class="contact-email-block">
+          <span class="email-label">Correo de contacto</span>
+          <a class="contact-email-link" href="mailto:contacto@prometheus-tech.com.mx">
+            contacto@prometheus-tech.com.mx
+          </a>
+          <a class="btn btn-dark" href="mailto:contacto@prometheus-tech.com.mx?subject=Contacto%20-%20Prometheus">
+            Enviar correo
+          </a>
+        </div>
+      </section>
+
+      <!-- Nota de respuesta -->
+      <div class="contact-note">
+        <span class="section-label">Tiempos de respuesta</span>
+        <p>
+          Respondemos en un plazo de 24 a 48 horas hábiles. Todas las conversaciones
+          son confidenciales.
+        </p>
       </div>
-    </section>
 
-    <div class="footer">
-      © <span id="y"></span> Prometheus
-    </div>
+    </div><!-- /.container -->
   </main>
 
+  <footer>
+    <div class="footer-inner">
+      <a class="brand-footer" href="/" aria-label="Prometheus — Inicio">Prometheus<span>•</span></a>
+      <span class="footer-copy">© <span id="y"></span> · Soluciones B2B de hardware y software</span>
+      <div class="footer-links">
+        <a href="/nosotros">Nosotros</a>
+        <a href="/soluciones">Soluciones</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+  (() => {
+    const btn   = document.getElementById('menuToggle');
+    const panel = document.getElementById('mobileNavPanel');
+    if (!btn || !panel) return;
+    btn.addEventListener('click', () => {
+      const isOpen = panel.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    panel.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        panel.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
   </script>
 </body>
 </html>
