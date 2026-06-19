@@ -572,32 +572,8 @@ footer {
 
 .flicker { animation: flicker 3s infinite; }
 
-/* ——— RIPPLE ——— */
-.theme-ripple {
-  position: fixed;
-  inset: 0;
-  background: var(--white);
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0;
-  clip-path: circle(0px at 50% 50%);
-  transition: clip-path 650ms ease-out, opacity 1ms linear;
-}
-
-body.ripple-ready .theme-ripple {
-  opacity: 1;
-  clip-path: circle(var(--r0, 0px) at var(--cx, 50%) var(--cy, 50%));
-}
-
-body.ripple-go .theme-ripple {
-  clip-path: circle(150vmax at var(--cx, 50%) var(--cy, 50%));
-}
-
-nav a.contact-link.ripple-flash { opacity: .5; }
-
 @media (prefers-reduced-motion: reduce) {
-  .theme-ripple { transition: none; }
-  .flicker      { animation: none; }
+  .flicker { animation: none; }
 }
 
 /* ——— RESPONSIVE ——— */

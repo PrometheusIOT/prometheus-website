@@ -20,8 +20,6 @@
 </head>
 
 <body>
-  <div class="theme-ripple" aria-hidden="true"></div>
-
   <header>
     <div class="header-inner">
       <a class="brand" href="/" aria-label="Prometheus — Inicio">Prometheus<span>•</span></a>
@@ -30,7 +28,7 @@
         <a href="/nosotros" class="active">Nosotros</a>
         <a href="/soluciones">Soluciones</a>
         <a href="#" class="is-disabled" aria-disabled="true" title="En progreso">Catálogo</a>
-        <a href="/contacto" class="contact-link" data-ripple>Contacto</a>
+        <a href="/contacto" class="contact-link">Contacto</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNavPanel">
         <span class="menu-bar"></span>
@@ -43,7 +41,7 @@
       <a href="/nosotros" class="active">Nosotros</a>
       <a href="/soluciones">Soluciones</a>
       <a href="#" class="is-disabled" aria-disabled="true" title="En progreso">Catálogo</a>
-      <a href="/contacto" class="contact-link" data-ripple>Contacto</a>
+      <a href="/contacto" class="contact-link">Contacto</a>
     </div>
   </header>
 
@@ -155,40 +153,6 @@
         btn.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
       });
-    });
-  })();
-  </script>
-  <script>
-  (() => {
-    const DELAY    = 200;
-    const DURATION = 650;
-    const links    = document.querySelectorAll('a[data-ripple]');
-    if (!links.length) return;
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    links.forEach(a => {
-      a.addEventListener('click', (e) => {
-        if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-        const href = a.getAttribute('href');
-        if (!href || href === '#') return;
-        if (prefersReduced) return;
-        e.preventDefault();
-        a.classList.add('ripple-flash');
-        const r  = a.getBoundingClientRect();
-        const cx = r.left + r.width  / 2;
-        const cy = r.top  + r.height / 2;
-        const r0 = Math.sqrt((r.width/2)**2 + (r.height/2)**2) + 2;
-        document.documentElement.style.setProperty('--cx', cx + 'px');
-        document.documentElement.style.setProperty('--cy', cy + 'px');
-        document.documentElement.style.setProperty('--r0', r0 + 'px');
-        document.body.classList.add('ripple-ready');
-        void document.body.offsetHeight;
-        setTimeout(() => document.body.classList.add('ripple-go'), DELAY);
-        setTimeout(() => { window.location.href = href; }, DELAY + DURATION);
-      });
-    });
-    window.addEventListener('pageshow', () => {
-      document.body.classList.remove('ripple-ready', 'ripple-go');
-      links.forEach(a => a.classList.remove('ripple-flash'));
     });
   })();
   </script>
